@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KW479 · 个人主页</title>
-<meta name="description" content="KW479 的个人主页 —— 嵌入式开发 / C++ / STM32。">
+<meta name="description" content="KW479 的个人主页 —— 计算机专业本科生，主攻嵌入式与机器人电控方向。">
 <meta name="theme-color" content="#fcfcfa">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a1a1a'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='600' fill='%23fcfcfa'%3EK%3C/text%3E%3C/svg%3E">
 <style>
@@ -33,31 +33,39 @@
   .rule {
     width: 40px;
     height: 3px;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
     border-radius: 2px;
     background: #1a1a1a;
   }
 
   h1 {
     margin: 0;
-    font-size: clamp(40px, 8vw, 60px);
+    font-size: clamp(38px, 7.6vw, 56px);
     font-weight: 600;
     letter-spacing: -0.03em;
     line-height: 1.1;
   }
 
   .tagline {
-    margin: 20px 0 0;
-    font-size: clamp(15px, 2.4vw, 18px);
-    line-height: 1.85;
+    margin: 18px 0 0;
+    font-size: clamp(15px, 2.3vw, 17px);
+    line-height: 1.8;
     color: #565656;
+  }
+
+  .lead {
+    margin: 24px 0 0;
+    max-width: 50ch;
+    font-size: 15.5px;
+    line-height: 1.95;
+    color: #4f4f4f;
   }
 
   .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin: 32px 0 0;
+    margin: 26px 0 0;
     padding: 0;
     list-style: none;
   }
@@ -72,11 +80,50 @@
     white-space: nowrap;
   }
 
+  .now {
+    margin: 34px 0 0;
+    padding-top: 22px;
+    border-top: 1px solid #eeebe5;
+  }
+
+  .now-label {
+    margin: 0 0 12px;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: #a8a5a0;
+  }
+
+  .now ul {
+    display: grid;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .now li {
+    position: relative;
+    padding-left: 17px;
+    font-size: 14.5px;
+    color: #4f4f4f;
+  }
+
+  .now li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #c9c5be;
+  }
+
   .contact {
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    margin-top: 40px;
+    margin-top: 34px;
     padding-bottom: 2px;
     font-size: 15px;
     color: #1a1a1a;
@@ -95,7 +142,7 @@
   }
 
   footer {
-    margin-top: 56px;
+    margin-top: 44px;
     font-size: 12px;
     color: #a8a5a0;
     letter-spacing: 0.01em;
@@ -110,8 +157,9 @@
   ::selection { background: #1a1a1a; color: #fcfcfa; }
 
   @media (max-width: 480px) {
-    body { padding: 48px 22px; }
-    footer { margin-top: 44px; }
+    body { padding: 44px 22px; }
+    footer { margin-top: 36px; }
+    .now { margin-top: 28px; padding-top: 18px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -126,16 +174,29 @@
     <h1>KW479</h1>
 
     <p class="tagline">
-      嵌入式开发 / C++ / STM32<br>
+      嵌入式开发 / 机器人电控<br>
       写能跑在硬件上的代码
     </p>
 
+    <p class="lead">
+      计算机专业本科生，主攻嵌入式与机器人电控方向。注重底层原理与动手实践，
+      习惯稳步学习、独立思考——这个页面用来记录自己持续沉淀的工程轨迹。
+    </p>
+
     <ul class="tags">
-      <li>STM32</li>
       <li>C / C++</li>
+      <li>STM32</li>
       <li>CMake</li>
-      <li>嵌入式系统</li>
+      <li>机器人电控</li>
     </ul>
+
+    <section class="now">
+      <p class="now-label">现在</p>
+      <ul>
+        <li>夯实 C 语言与单片机工程基础</li>
+        <li>备战机器人相关竞赛</li>
+      </ul>
+    </section>
 
     <a class="contact" href="https://github.com/KW479" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
